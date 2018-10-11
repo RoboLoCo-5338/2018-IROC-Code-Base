@@ -4,15 +4,21 @@ package org.usfirst.frc.team5338.robot.subsystems;
 import org.usfirst.frc.team5338.robot.commands.DetectCubes;
 
 import edu.wpi.first.wpilibj.command.Subsystem;
+import edu.wpi.first.networktables.NetworkTable;
+import edu.wpi.first.networktables.NetworkTableEntry;
+import edu.wpi.first.networktables.NetworkTableInstance;
 
 public class VisionSystem extends Subsystem
 {
 	// private final NetworkTableInstance instance = NetworkTableInstance.create();
+	private final NetworkTable table = NetworkTableInstance.getDefault().getTable("limelight");
+	NetworkTableEntry camMode;
+	NetworkTableEntry ledMode;
+
 	public VisionSystem()
 	{
-		super();
-		// this.instance.startServer("/tmp/networktables.persist", "0.0.0.0", 5800);
-		// this.table = this.instance.getTable("vision");
+		camMode = table.getEntry("camMode");
+		ledMode = table.getEntry("ledMode");
 	}
 	@Override
 	public void initDefaultCommand()
@@ -21,18 +27,7 @@ public class VisionSystem extends Subsystem
 	}
 	public void track()
 	{
-		// SmartDashboard.putBoolean("Jetson Connected", this.instance.isConnected());
-		// final boolean cubePresent =
-		// this.table.getEntry("CubeDetected").getBoolean(false);
-		// SmartDashboard.putBoolean("Cube Found", cubePresent);
-		// if(cubePresent)
-		// {
-		// SmartDashboard.putNumber("Cube Heading",
-		// -((this.table.getEntry("XCoordinate").getDouble(0.0) + 130) - 320));
-		// }
-		// else
-		// {
-		// SmartDashboard.putNumber("Cube Heading", 0.0);
-		// }
+		camMode.setNumber(1);
+		ledMode.setNumber(1);
 	}
 }

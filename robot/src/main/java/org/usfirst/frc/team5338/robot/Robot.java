@@ -7,6 +7,7 @@ import org.usfirst.frc.team5338.robot.subsystems.Claw;
 import org.usfirst.frc.team5338.robot.subsystems.Climber;
 import org.usfirst.frc.team5338.robot.subsystems.DriveTrain;
 import org.usfirst.frc.team5338.robot.subsystems.Sensors;
+import org.usfirst.frc.team5338.robot.subsystems.VisionSystem;
 
 //Import of all essential WPILib classes.
 import edu.wpi.first.wpilibj.IterativeRobot;
@@ -25,6 +26,7 @@ public class Robot extends IterativeRobot
 	public static final Climber climber = new Climber();
 	public static final OI oi = new OI();
 	public static final Sensors sensors = new Sensors();
+	public static final VisionSystem vision = new VisionSystem();
 	// Creates SendableChooser objects
 	@SuppressWarnings("unused")
 	public static SendableChooser<String> autonomousChooser = new SendableChooser<String>();

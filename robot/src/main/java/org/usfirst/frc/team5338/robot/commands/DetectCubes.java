@@ -4,16 +4,19 @@ package org.usfirst.frc.team5338.robot.commands;
 //Import all needed classes from WPILib.
 import edu.wpi.first.wpilibj.command.Command;
 
+import org.usfirst.frc.team5338.robot.Robot;
+
 public class DetectCubes extends Command
 {
+
 	public DetectCubes()
 	{
-		// this.requires(Robot.visionsystem);
+		this.requires(Robot.vision);
 	}
 	@Override
 	protected void execute()
 	{
-		// Robot.visionsystem.track();
+		 Robot.vision.track();
 	}
 	@Override
 	protected boolean isFinished()
