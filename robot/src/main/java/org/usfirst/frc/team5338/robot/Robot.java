@@ -28,7 +28,7 @@ public class Robot extends IterativeRobot
 	public static final Sensors sensors = new Sensors();
 	public static final VisionSystem vision = new VisionSystem();
 	// Creates SendableChooser objects
-	@SuppressWarnings("unused")
+	//@SuppressWarnings("unused")
 	public static SendableChooser<String> autonomousChooser = new SendableChooser<String>();
 	// Defines Command object for Auto
 	public static Command autonomous;
@@ -82,15 +82,15 @@ public class Robot extends IterativeRobot
 	private static void setupAutonomous()
 	{
 		// TODO CHECK FUNCTIONALITY
-		Robot.autonomousChooser.addDefault("Center Autonomous (DEFAULT)", "CENTER");
-		Robot.autonomousChooser.addObject("Left Autonomous (Scale Priority)", "LEFTSCALESWITCH");
-		Robot.autonomousChooser.addObject("Left Autonomous (Switch Priority)", "LEFTSWITCHSCALE");
-		Robot.autonomousChooser.addObject("Left Autonomous (Switch Only)", "LEFTSWITCHONLY");
-		Robot.autonomousChooser.addObject("Right Autonomous (Scale Priority)", "RIGHTSCALESWITCH");
-		Robot.autonomousChooser.addObject("Right Autonomous (Switch Priority)", "RIGHTSWITCHSCALE");
-		Robot.autonomousChooser.addObject("Right Autonomous (Switch Only)", "RIGHTSWITCHONLY");
-		Robot.autonomousChooser.addObject("Baseline Cross Autonomous", "BASELINE");
-		Robot.autonomousChooser.addObject("NO AUTONOMOUS (DANGER)!!!", "NOTHING");
+		autonomousChooser.addDefault("Center Autonomous (DEFAULT)", "CENTER");
+		autonomousChooser.addObject("Left Autonomous (Scale Priority)", "LEFTSCALESWITCH");
+		autonomousChooser.addObject("Left Autonomous (Switch Priority)", "LEFTSWITCHSCALE");
+		autonomousChooser.addObject("Left Autonomous (Switch Only)", "LEFTSWITCHONLY");
+		autonomousChooser.addObject("Right Autonomous (Scale Priority)", "RIGHTSCALESWITCH");
+		autonomousChooser.addObject("Right Autonomous (Switch Priority)", "RIGHTSWITCHSCALE");
+		autonomousChooser.addObject("Right Autonomous (Switch Only)", "RIGHTSWITCHONLY");
+		autonomousChooser.addObject("Baseline Cross Autonomous", "BASELINE");
+		autonomousChooser.addObject("NO AUTONOMOUS (DANGER)!!!", "NOTHING");
 		// Robot.autonomousChooser.addObject("TESTING (DANGER)!!!", "TESTING");
 		SmartDashboard.putData("Autonomous Choice", Robot.autonomousChooser);
 	}
