@@ -2,7 +2,6 @@
 package org.usfirst.frc.team5338.robot.subsystems;
 
 import org.usfirst.frc.team5338.robot.commands.DetectCubes;
-
 import edu.wpi.first.wpilibj.command.Subsystem;
 import edu.wpi.first.networktables.NetworkTable;
 import edu.wpi.first.networktables.NetworkTableEntry;
@@ -10,7 +9,7 @@ import edu.wpi.first.networktables.NetworkTableInstance;
 
 public class VisionSystem extends Subsystem
 {
-	// private final NetworkTableInstance instance = NetworkTableInstance.create();
+	//private final NetworkTableInstance instance = NetworkTableInstance.create();
 	private final NetworkTable table = NetworkTableInstance.getDefault().getTable("limelight");
 	NetworkTableEntry camMode;
 	NetworkTableEntry ledMode;
@@ -30,4 +29,6 @@ public class VisionSystem extends Subsystem
 		camMode.setNumber(1);
 		ledMode.setNumber(1);
 	}
+	
+	//hello
 }
