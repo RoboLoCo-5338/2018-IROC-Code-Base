@@ -57,6 +57,7 @@ public class Robot extends IterativeRobot
 	public void autonomousPeriodic()
 	{
 		Scheduler.getInstance().run();
+		//added limelight changes
 	}
 	// Public method that runs once at the beginning of teleop.
 	@Override
