@@ -41,6 +41,7 @@ public class Autonomous extends CommandGroup
 						this.addSequential(new ChangeClawPosition(2));
 						this.addSequential(new DepositCube(0.25));
 						break;
+						
 					}
 					else if(switchSide == MatchData.OwnedSide.RIGHT)
 					{
