@@ -30,5 +30,5 @@ public class VisionSystem extends Subsystem
 		ledMode.setNumber(1);
 	}
 	
-	//hello
+	//buddy
 }
