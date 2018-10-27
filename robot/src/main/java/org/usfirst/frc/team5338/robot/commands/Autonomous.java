@@ -29,6 +29,7 @@ public class Autonomous extends CommandGroup
 				case "CENTER":
 					if(switchSide == MatchData.OwnedSide.LEFT)
 					{
+						this.addSequential(new ResetSensors());
 						this.addSequential(new Straight(30.0));
 						this.addSequential(new ResetSensors());
 						this.addSequential(new Turn(-55.0));
@@ -44,6 +45,7 @@ public class Autonomous extends CommandGroup
 					}
 					else if(switchSide == MatchData.OwnedSide.RIGHT)
 					{
+						this.addSequential(new ResetSensors());
 						this.addSequential(new Straight(30.0));
 						this.addSequential(new ResetSensors());
 						this.addSequential(new Turn(55.0));
@@ -62,6 +64,7 @@ public class Autonomous extends CommandGroup
 											// unfavorable
 					if(switchSide == MatchData.OwnedSide.RIGHT)
 					{
+						this.addSequential(new ResetSensors());
 						this.addSequential(new Straight(132.0));
 						this.addSequential(new ResetSensors());
 						this.addSequential(new Turn(-80.0));
@@ -74,6 +77,7 @@ public class Autonomous extends CommandGroup
 					}
 					else if(scaleSide == MatchData.OwnedSide.RIGHT)
 					{
+						this.addSequential(new ResetSensors());
 						this.addSequential(new Straight(245));
 						this.addSequential(new ResetSensors());
 						this.addSequential(new Turn(-88.0));
@@ -86,6 +90,7 @@ public class Autonomous extends CommandGroup
 					}
 					else
 					{
+						this.addSequential(new ResetSensors());
 						this.addSequential(new Straight(126.0));
 					}
 					break;
